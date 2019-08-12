@@ -27,9 +27,9 @@ public:
     void resized() override;
 
 private:
-    //==============================================================================
-    // Your private member variables go here...
-
-
+    Slider dial1;
+    Slider dial2;
+    TextButton button1;
+    TextButton button2;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
