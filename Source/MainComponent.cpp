@@ -13,8 +13,8 @@ MainComponent::MainComponent()
 {
     setSize (300, 200);
 
-    getLookAndFeel().setColour(Slider::thumbColourId, Colours::red);
-    
+    otherLookAndFeel.setColour(Slider::thumbColourId, Colours::red);
+    dial1.setLookAndFeel(&otherLookAndFeel);
     dial1.setSliderStyle(Slider::Rotary);
     dial1.setTextBoxStyle(Slider::NoTextBox, false, 0, 0);
     addAndMakeVisible(dial1);

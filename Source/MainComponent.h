@@ -27,6 +27,7 @@ public:
     void resized() override;
 
 private:
+    LookAndFeel_V4 otherLookAndFeel;
     Slider dial1;
     Slider dial2;
     TextButton button1;
