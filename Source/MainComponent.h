@@ -10,11 +10,13 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
+class OtherLookAndFeel	: public LookAndFeel_V4
+{
+public:
+	OtherLookAndFeel();
+	void drawRotarySlider(Graphics&, int, int, int, int, float, const float, const float, Slider&) override;
+};
+
 class MainComponent   : public Component
 {
 public:
@@ -27,7 +29,7 @@ public:
     void resized() override;
 
 private:
-    LookAndFeel_V4 otherLookAndFeel;
+    OtherLookAndFeel otherLookAndFeel;
     Slider dial1;
     Slider dial2;
     TextButton button1;
